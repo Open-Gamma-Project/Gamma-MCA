@@ -14,7 +14,6 @@
     - (?) Hotkey to open/close settings
     - (?) Add desktop notifications
     - Add Isotope Recognition for Peak Detector
-    - Tabs for main control functions up top
     - Spike cursor decimal places
     - (!) Weird comb-structure with quadratic calibrations
 
