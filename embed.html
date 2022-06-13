@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="expires" content="86400"> <!-- 24h cached -->
+    <meta name="author" content="NuclearPhoenix">
+  	<meta name="language" content="English">
+    <!--
+      CSP: Only allow loading resources from this website.
+      Script-src: unsafe-inline for now. Bad practice, but better than not having any CSP at all.
+      Style-src: unsafe-inline needed for Plotly.js styles.
+      Img-src needs data: and blob: otherwise it cannot load some images.
+      Connect-src is used for fetch (Custom isotope list URL) - * allow all.
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';
+                                                        script-src 'self' 'unsafe-inline';
+                                                        style-src 'self' 'unsafe-inline';
+                                                        img-src 'self' data: blob:;">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#f6bd16">
+
+    <title>Gamma MCA - Gamma-ray spectroscopy</title>
+
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+  </head>
+  <body>
+
+    <!--
+      LOADING AND NOSCRIPT ALERT
+    -->
+    <div id="js-error" class="vh-100 vw-100 fixed-top">
+      <div id="text-window" class="fixed-top m-1 p-1 bg-light">
+
+        <noscript>
+          <b>
+            This website only works with Javascript enabled. You need to enable it in your browser to be able to use this site.
+            Instructions on how to do this can be found <a title="Enable-Javascript.com" href="https://enable-javascript.com/" target="_blank">here</a>.
+          </b>
+        </noscript>
+
+      </div>
+
+      <div class="vh-100 vw-100 bg-dark bg-opacity-75"></div>
+    </div>
+
+    <!--
+      PLOT DIV
+    -->
+    <div class="d-flex vh-100 pb-1">
+      <div class="flex-fill">
+
+        <div class="w-100 h-100 flex-fill" id="plot"></div>
+
+      </div>
+    </div>
+
+    <script src="/assets/js/external/plotly-basic.min.js"></script>
+    <script src="/assets/js/plot.js"></script>
+    <script src="/assets/js/embed.js"></script>
+  </body>
+</html>

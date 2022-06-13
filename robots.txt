@@ -1,4 +1,4 @@
 User-Agent: *
 Disallow: /assets/
 Disallow: /404.html
-Sitemap: https://spectrum.nuclearphoenix.xyz/sitemap.xml
+Disallow: /embed.html
